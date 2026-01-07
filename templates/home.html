@@ -1,0 +1,426 @@
+<html><head>
+    <meta name='admaven-placement' content=Bqds4rdw4>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+<meta charset="UTF-8">
+<title>SD Downloader - Download from Studydrive</title>
+<meta name="description" content="This extension allows you to download materials and notes from Studydrive for free, and bypass the paywall.">
+
+<script data-cfasync="false" src="//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1107666"></script>
+    <style>.btn {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0px;
+        color: #ffffff;
+        font-size: 20px;
+        background: #1c1c1c;
+        padding: 15px 30px 15px 30px;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        background: #6b6b6b;
+        text-decoration: none;
+    }
+
+
+
+
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        padding-bottom: 20px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        color: #000;
+        text-align: center;
+        line-height: 50px;
+        z-index: 1002;
+        font-size: 16px;
+        transition: background-color 0.5s ease-in-out,
+        backdrop-filter 0.5s ease-in-out,
+        font-size 0.5s ease-in-out,
+        padding 0.5s ease-in-out;
+    }
+
+
+
+
+
+
+    .left-content {
+        margin-right: auto;
+    }
+
+    .right-content {
+        margin-left: auto;
+    }
+
+    .topbar-link {
+        font-family: Poppins;
+        padding-right: 20px;
+        text-decoration: none !important;
+        color: inherit !important;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(60%);
+    }
+
+    .content {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        color: #fff;
+        font-size: 2em;
+        z-index: 1;
+    }
+
+    .follow {
+        position: relative;
+        z-index: 2;
+    }
+
+
+    .spark {
+        position: absolute;
+        top: -60;
+        left: 0;
+        display: none;
+        width:100%
+    }
+
+
+    @keyframes spark-animation {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .spark {
+        animation: spark-animation 0.1s ease infinite;
+    }
+
+
+
+    .box {
+        width: 15%;
+        height: 40%;
+        background-color: #0d0d0d;
+        border-radius: 30px;
+        display: inline-block;
+        margin-left: 1%;
+        margin-right: 1%;
+        text-align: center
+    }
+
+    .vert-box {
+        height: 15%;
+        width: 30%;
+        background-color: #0d0d0d;
+        border-radius: 30px;
+        display: inline-block;
+        margin-left: 1%;
+        margin-right: 1%;
+        text-align: center
+    }
+
+
+
+    /* Default styles for both desktop and mobile */
+.hideimg {
+    display: block !important; /* Assuming the default display is 'block' */
+}
+
+.superior {
+    width: 50% !important; /* Assuming the default width */
+}
+
+/* Media query for screens smaller than 768 pixels (typical mobile screens) */
+@media screen and (max-width: 1024px) {
+    /* Hide the class 'hideimg' on mobile */
+    .hideimg {
+        display: none !important;
+    }
+
+    /* Set the width of the class 'superior' to 100% on mobile */
+    .superior {
+        width: 100% !important;
+    }
+}
+</style>
+</head>
+<body style="
+    margin: 0;
+">
+<script>window.addEventListener('scroll', function() {
+    var myDiv = document.getElementById('top-bar');
+    var logo = document.getElementById('logo');
+    var currentScrollPosition = window.pageYOffset;
+
+    if (currentScrollPosition === 0) {
+        myDiv.style.backgroundColor = 'transparent';
+        myDiv.style.backdropFilter = 'none';
+        myDiv.style.paddingTop = '20px';
+        myDiv.style.paddingBottom = '20px';
+        myDiv.style.fontSize = '16px'
+        logo.style.height = "60%"
+    } else {
+        myDiv.style.backgroundColor = 'rgb(40 40 40 / 31%)';
+        myDiv.style.backdropFilter = 'blur(30px)';
+        myDiv.style.paddingTop = '0px';
+        myDiv.style.paddingBottom = '0px';
+        myDiv.style.fontSize = '14px'
+        logo.style.height = '45%'
+
+    }
+});</script>
+
+
+
+
+<div class="top-bar" style="padding-top: 20px; background-color: transparent; backdrop-filter: none; padding-bottom: 20px; font-size: 16px;" id="top-bar">
+    <div class="left-content" style="
+    
+    padding-left: 30px;
+    height: inherit;
+    padding-top: 28;
+">
+        <a href="https://artifactpowered.com">
+            <img src="https://artifactpowered.com/whitetrans.png" id="logo" style="height: 60%; filter: invert(100%); transition: height 0.5s ease-in-out;">
+        </a>
+
+    </div>
+    <div class="right-content" style="
+    padding-right: 30px;
+">
+
+
+
+       </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="" style="
+         text-align: left;
+         color: #141414;
+         background-color: #fdfdfd;
+         margin-top: 100px;
+         padding-left: 5%;
+         padding-right: 5%;
+         font-family: 'Raleway';
+         ">
+
+    <h1 style="
+    font-size: 60px;
+    padding-top: 60px;
+    margin-bottom: 10px;
+"><img src="https://artifactpowered.com/sd-downloader/icon-128.png" style="
+    height: px;
+    width: 60px;
+    display: inline;
+    vertical-align: text-top;
+    padding-top: 3px;
+">&nbsp;<span>SD Downloader</span></h1>
+<h2 style="
+    margin-top: 0;
+">Easily download files from Studydrive</h2>
+    <p><strong>Easy to use:</strong> Just access the page of the Studydrive document you want to download and click "Download". <br><strong>Fast and efficient:</strong>
+ Our website quickly fetches and downloads the document for you.<br><strong>Free of charge:</strong>
+ No hidden costs or fees.</p>
+
+
+<p>Please note: This extension is not affiliated with or endorsed by Studydrive</p>
+
+<br><a href="https://github.com/artifactpowered/SD-Downloader/tree/Chrome" style="
+    background: #3f3f3f;
+    color: white;
+    text-decoration: none;
+    padding-top: 10;
+    border-radius: 15px;
+    padding-bottom: 10;
+    padding-left: 20;
+    padding-right: 20;
+">Chrome</a>
+
+<a href="https://addons.mozilla.org/de/firefox/addon/sd-downloader/" style="
+    background: #3f3f3f;
+    color: white;
+    text-decoration: none;
+    padding-top: 10;
+    border-radius: 15px;
+    padding-bottom: 10;
+    padding-left: 20;
+    padding-right: 20;
+    margin-left: 15px;
+">Firefox</a>
+<a href="https://github.com/artifactpowered/SD-Downloader/tree/Opera" style="
+    background: #3f3f3f;
+    color: white;
+    text-decoration: none;
+    padding-top: 10;
+    border-radius: 15px;
+    padding-bottom: 10;
+    padding-left: 20;
+    padding-right: 20;
+    margin-left: 15px;
+">Opera</a>
+<br>
+
+<br><h2>Support and feedback requests</h2>
+For any requests contact <a href="mailto:info@artifactpowered.com">info@artifactpowered.com</a><br><br><br><br><br>
+         </div>
+
+
+
+
+<div class="" style="
+         text-align: center;
+         color: #ffffff;
+         height: 44.1%;
+         background-color: #0a0e2a;
+         position: relative;
+         ">
+         <div style="
+            display: flex;
+            text-align: left;
+            " class="foot_contain">
+            <div style="display: inline;width: 33%;" class="superior">
+               <ul style="
+                  list-style: none;
+                  font-family: 'Raleway';
+                  padding-top: 10%;
+                  font-size: 200%;
+                  ">
+                  <li style="
+                     padding-bottom: 2%;
+                     "><a href="https://artifactpowered.com/aboutus.html" style="
+    text-decoration: none;
+    color: white;
+">About us</a></li>
+                  <li style="
+                     padding-bottom: 2%;
+                     "><a href="https://artifactpowered.com/privacy.html" style="
+    text-decoration: none;
+    color: white;
+">Privacy policy</a></li>
+                  <li style="
+                     padding-bottom: 2%;
+                     "><a href="https://artifactpowered.com/contact.html" style="
+    text-decoration: none;
+    color: white;
+">Contact us</a></li>
+               </ul>
+            </div>
+            <div style="display:inline-block;width: 33%;" class="hideimg"></div>
+            <div style="display: inline-block;width: 33%;" class="hideimg">
+               <img src="https://artifactpowered.com/Clone.png" style="
+                  width: 100%;
+                  ">
+            </div>
+         </div>
+         <div style="border-top: 1px solid #565b7c;padding-left: 3%;text-align: left;padding-top: 15px;position: absolute;bottom: 0;width: 97%;padding-bottom: 20px;">
+            <span style="
+               font-family: 'Poppins';
+               color: #919191;
+               font-weight: 200;
+               margin-right: 2%;
+               ">Copyright © 2023  	 -   artifact SAS, 229 Rue Saint-Honoré, 75001, Paris</span>
+            <a href="https://artifactpowered.com/legal.html" style="
+               text-decoration: none;
+               color: white;
+               font-family: 'Raleway';
+               ">Legal Notices</a>
+         </div>
+         <br>
+         <script>
+     const toggleSpan = document.getElementById('toggle-span');
+     const myDiv = document.getElementById('nav-mobile');
+
+     toggleSpan.addEventListener('click', function() {
+       if (myDiv.style.opacity === '0') {
+         myDiv.style.opacity = '1';
+         myDiv.style.display = 'block';
+         document.body.style.overflow = 'hidden';
+       } else {
+         myDiv.style.opacity = '0';
+         setTimeout(function() {
+           myDiv.style.display = 'none';
+           document.body.style.overflow = 'auto';
+         }, 300); // Adjust the timeout value to match the transition duration
+       }
+     });
+   </script></div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,168 @@
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <title><!--Disable your Adblocker!-->Please wait</title>
+    <meta charset="UTF-8">
+    <style>
+        h1 {
+            color: white;
+            font-family: Raleway;
+        }
+
+        h2 {
+            color: white;
+            font-family: Raleway;
+        }
+
+        span {
+            color: white;
+            font-family: Raleway;
+        }
+
+        p {
+            color: white;
+            font-family: Raleway;
+        }
+    </style>
+
+</head>
+<body style="background: black">
+
+
+
+    <div id="message" style="display: none; width: auto; height: auto; text-align: center; padding: 30px;">
+        <div  >
+            <h1>Please play fair!</h1>
+            <h2>Deactivate your ad-blocker or whitelist <b style="text-decoration: underline;">capture.artifactpowered.com</b></h2>
+            <span style="width: 50%; display: inline-block;">SD-Downloader is a free service. We need the advertising revenue in order to maintain our server infrastructure. We promise to keep ads nonintrusive and appropriate. In return we ask you to disable your ad-blocker.</span>
+            <br><br>
+
+            <style>
+                details {
+                  width: 80%;
+                  margin: 20px auto;
+                  padding: 15px;
+                  border: 1px solid #727272;
+                  border-radius: 8px;
+                  background-color: #111111;
+                  font-family: Arial, sans-serif;
+                  transition: all 0.3s ease;
+                  cursor: pointer;
+                }
+            
+                details:hover {
+                  background-color: #656565;
+                  box-shadow: 0 2px 8px rgba(161, 161, 161, 0.1);
+                }
+            
+                summary {
+                  font-size: 20px;
+                  font-weight: bold;
+                  color: #f2f2f2;
+                  list-style: none;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                }
+            
+                summary::after {
+                  content: '▼';
+                  font-size: 14px;
+                  margin-left: 10px;
+                  transition: transform 0.3s ease;
+                }
+            
+                details[open] summary::after {
+                  transform: rotate(180deg);
+                }
+            
+                .whitelist-section {
+                  display: flex;
+                  justify-content: space-around;
+                  margin-top: 20px;
+                  flex-wrap: wrap;
+                }
+            
+                .whitelist-item {
+                  width: 30%;
+                  text-align: center;
+                  margin-bottom: 20px;
+                }
+            
+                .whitelist-item img {
+                  height: 500px;
+                  width: auto;
+                  margin-top: 10px;
+                }
+            
+                @media (max-width: 768px) {
+                  .whitelist-item {
+                    width: 100%;
+                  }
+                }
+              </style>
+
+
+            <details>
+                <summary>🔓 How to whitelist (Click to expand)</summary>
+                <div class="whitelist-section">
+                <div class="whitelist-item">
+                    <p>Adblock</p>
+                    <img src="{{ url_for('static', filename='images/adblock.png') }}" alt="Adblock">
+                </div>
+                <div class="whitelist-item">
+                    <p>Adblock Plus</p>
+                    <img src="{{ url_for('static', filename='images/adblockplus.png') }}" alt="Adblock Plus">
+                </div>
+                <div class="whitelist-item">
+                    <p>Opera</p>
+                    <img src="{{ url_for('static', filename='images/opera.png') }}" alt="Opera">
+                </div>
+                </div>
+            </details>
+            <br><br>
+            <div style="display: inline-block; font-size: 20px; font-family: Raleway; width: 50%; background: rgb(255, 255, 255); padding: 10px; border: 1px solid rgb(0, 0, 0)"><b>Your download will continue</b> after you disable the ad-blocker and reload the page!</div>
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+        async function detectAdBlock() {
+            //let adBlockEnabled = false
+            //const googleAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+            //try {
+            //    await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
+            //} catch (e) {
+            //    adBlockEnabled = true
+            //} finally {
+            //    console.log(`AdBlock Enabled: ${adBlockEnabled}`)
+            //}
+
+            //if (adBlockEnabled) {
+            //    console.log("Showing")
+            //    document.querySelector("#message").style.display = "block"
+            
+            //} else {  
+            //    console.log("Not showing")
+            //    document.querySelector("#message").style.display = "none"
+            //    window.location.href = "{{ url_for('choose', uuid=uuid) }}";
+            //}
+
+            window.location.href = "{{ url_for('choose', uuid=uuid) }}";
+            
+        }
+        detectAdBlock()
+          
+    
+        
+        
+    </script>
+
+</body>
+</html>
+

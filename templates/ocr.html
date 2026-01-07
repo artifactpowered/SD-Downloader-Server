@@ -1,0 +1,81 @@
+<html><head>
+    <title>Choose a downloading method</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <style>
+        .method-box {
+            background: black;
+            transition: background-color 0.1s ease;
+        }
+
+        .method-box:hover {
+            background: #222222;
+        }
+
+        .handler {
+            opacity: 0;
+            transform: scale(1.1);
+            animation: fadeSlideZoom 0.4s ease-out forwards;
+        }
+
+        @keyframes fadeSlideZoom {
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+        }
+
+
+
+    </style>
+</head>
+<body style="background: #0e0e0e; font-family: Raleway; color: white; text-align: center;">
+    <div style="display: flex; justify-content: center; align-items: center; height: 100%">
+        <div class="handler" style="text-align: left;border: 1px solid #1c1c1c;background: black;box-shadow: 2px 4px 45px 8px black;position: relative;">
+            <h1 style="text-align: center; margin-top: 40;">Do you want text optimization?</h1>
+<p style="
+    text-align: center;
+">Text optimization (OCR) allows you to select and copy text from the file</p>
+        <div style="padding-left: 60px; padding-right: 60px;">
+            <div style="text-align: center; display: flex; justify-content: center;">
+                <a href="{{ url_for('proceed_with_reconstruction', uuid=uuid, ocr='no') }}" style="display: inline-block;padding: 20px;border: 1px solid white;margin: 20px;text-align: left;position: relative;text-decoration: none;color: inherit;" class="method-box">
+                    
+
+                    <h2 style="margin-bottom: 0;">No</h2>
+                    
+                    
+                    
+                    
+                    <br>
+                    <p style="font-size: larger; display: flex; align-items: center;">
+                        <img src="{{ url_for('static', filename='images/time.png') }}" style="width: 30px;">&nbsp;&nbsp;Time:&nbsp; <span style="color: #ffdc2d; font-weight: 600;">{{ time_complexity_no }}</span>
+                    </p>
+                </a>
+
+                <a href="{{ url_for('proceed_with_reconstruction', uuid=uuid, ocr='yes') }}" style="display: inline-block;padding: 20px;border: 1px solid white;margin: 20px;text-align: left;position: relative;text-decoration: none;color: inherit;" class="method-box">
+                    
+                    <h2 style="margin-bottom: 0;">Yes</h2>
+                    
+
+                    
+
+                    
+                    
+                    <br>
+                    <p style="font-size: larger; display: flex; align-items: center;">
+                        <img src="{{ url_for('static', filename='images/time.png') }}" style="width: 30px;">&nbsp;&nbsp;Time:&nbsp; <span style="color: #ffdc2d; font-weight: 600;">{{ time_complexity_yes }}</span>
+                    </p>
+                </a>
+            </div>
+        </div>
+        <br><br>
+            <br><br><div style="width: 100%; height: 50px; background: #0d0d0d; position: absolute; bottom: 0px; display: flex; align-items: center; justify-content: center;">
+                <span style="color: #c0c0c0;">Not sure what to pick? Choose no - you most likely do not need it</span>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>

@@ -1,0 +1,87 @@
+<html><head>
+    <title>Choose a downloading method</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <style>
+        .method-box {
+            background: black;
+            transition: background-color 0.1s ease;
+        }
+
+        .method-box:hover {
+            background: #222222;
+        }
+
+        .handler {
+            opacity: 0;
+            transform: scale(1.1);
+            animation: fadeSlideZoom 0.4s ease-out forwards;
+        }
+
+        @keyframes fadeSlideZoom {
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+        }
+
+
+
+    </style>
+</head>
+<body style="background: #0e0e0e; font-family: Raleway; color: white; text-align: center;">
+    <div style="display: flex; justify-content: center; align-items: center; height: 100%">
+        <div class="handler" style="text-align: left;border: 1px solid #1c1c1c;background: black;box-shadow: 2px 4px 45px 8px black;position: relative;">
+            <h1 style="text-align: center; margin-top: 40;">Choose a downloading method:</h1>
+
+            <div style="text-align: center; display: table-row;">
+                <a href="{{ url_for('proceed_with_interception', uuid=uuid) }}" style="width: 40%; display: inline-block; padding: 20px; border: 1px solid white; margin: 20px; text-align: left; position: relative; text-decoration: none; color: inherit;" class="method-box">
+                    <img src="{{ url_for('static', filename='images/interception.png') }}" style="width: 20%;"><span style="position: absolute; right: 30px; font-size: 50; top: 30px;">➔</span>
+
+                    <h2 style="margin-bottom: 0;">Interception</h2>
+                    <span style="color: #6ed36e;">preserves original, </span><span style="">may fail</span><br>
+                    <br>
+                    <br>
+                    <p style="color: #cccccc;">
+                        This method loads the original file directly from the website.
+                        <br>
+                        <br>
+                        ✅ Best for Word files and simple PDFs <br>
+                        ❌ Struggles with image-heavy, handwritten, or large files
+                    </p>
+                    <br>
+                    <p style="font-size: larger; display: flex; align-items: center;">
+                        <img src="{{ url_for('static', filename='images/time.png') }}" style="width: 30px;">&nbsp;&nbsp;Estimated download time:&nbsp; <span style="color: #ffdc2d; font-weight: 600;">30s - 2min</span>
+                    </p>
+                </a>
+
+                <a href="" style="width: 40%; display: inline-block; padding: 20px; border: 1px solid rgb(129, 129, 129); margin: 20px; text-align: left; position: relative; text-decoration: none; color: inherit;">
+                    <img src="{{ url_for('static', filename='images/reconstruction.png') }}" style="width: 20%;"><span style="position: absolute; right: 30px; font-size: 50; top: 30px;">➔</span>
+                    <h2 style="margin-bottom: 0; color:#747474">Reconstruction</h2>
+                    <span style="color: #2b522b;">works in almost every case,</span><span style="color:#747474"> may take longer</span><br>
+
+                    <br>
+
+                    <br>
+                    <p style="color: #747474;">
+                        This method rebuilds the file from scratch, page by page. <br>
+                        <br>
+                         Works on any document, even tricky ones<br>
+                         Takes a bit longer, but gets the job done
+                    </p>
+                    <br>
+                    <p style="font-size: larger; display: flex; align-items: center;">
+                        ❌ Disabled for maintenance
+                    </p>
+                </a>
+            </div><br><br>
+            <br><br><div style="width: 100%; height: 50px; background: #0d0d0d; position: absolute; bottom: 0px; display: flex; align-items: center; justify-content: center;">
+                <span style="color: #c0c0c0;">Not sure what to pick? Try interception first - you can always retry! </span>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>

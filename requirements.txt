@@ -1,0 +1,9 @@
+Flask
+flask-cors
+ocrmypdf
+apscheduler
+PyPDF2
+Pillow
+playwright
+stem
+waitress
